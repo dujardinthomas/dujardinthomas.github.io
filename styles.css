@@ -23,23 +23,23 @@ a{
 }
 
 
-
 /*-----------*/
 /*HEADER & FOOTER*/
 header, footer{
-    background-image: url("image/illustration.jpg");
+    background-image: url("image/illustration\ -\ Copie.jpg");
     background-size: cover;
-    position: relative;
+    position: sticky;
     border-bottom: 2px solid #fff;
+    
 }
 
 
 nav{
     list-style-type: none ;
-    display: flex;                /* Transformation en flexbox */
-    padding:10;                    /* Suppression des marges internes */
-    background-color: #f1f7bc;       /* Ajout de la couleur d'arrière-plan */
-    justify-content: space-around;/* Alignements des liens dans le menu */
+    display: flex;        
+    padding:10;                  
+    background-color: #0e76a8 ;      
+    justify-content: space-around;
     position: fixed;
     width: 100%;
     
@@ -52,9 +52,17 @@ header{
 header h1{
     color: white;
     text-align: center;
-    line-height: 600px;
+    line-height: 300px;
     font-size: 4em;
+    word-spacing: 4px;
 }
+
+header img {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 footer{
     height: 100px;
@@ -78,7 +86,7 @@ section{
     display: flex; 
     flex-flow: row wrap;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     padding-bottom: 20px;
     margin: 20px auto;
     box-shadow: 0px 0px 10px #bbb;
@@ -89,6 +97,7 @@ section h2{
     text-align: center;
     margin: 20px 0;
     width: 90%;
+    text-transform: uppercase;
 }
 section > div{
     width: 90%;
@@ -101,8 +110,8 @@ section > div{
 }
 
 .photo img{
-    width: 180px;
-    height: 250px;
+    width: auto;
+    height: 200px;
 }
 
 /*boutton du cv*/
@@ -112,7 +121,7 @@ section > div{
     padding: 10px;
     margin: 10px auto 30px auto;
     color: #fff;
-    background-color: #EA0;
+    background-color: #0e76a8 ;
     box-shadow: 0px 0px 10px #ccc;
     border-radius: 5px;
 }
@@ -131,6 +140,11 @@ section > div{
 }
 
 
+.presentation p{
+    margin: 10px 0;
+}
+
+
 /*SECTION EXP ET FORMATION*/
 .exp{
     display: flex;
@@ -145,8 +159,14 @@ section > div{
     flex: 0 0 70%;
     margin-left: auto;
 }
+
+
+.exp-info p{
+    font-size: small;
+}
+
 .exp-logo{
-    max-width: 100px;
+    max-width: 80px;
 }
 
 .exp img{
@@ -158,6 +178,7 @@ section > div{
 .exp h4{
     font-size:  1em;
     font-weight: normal;
+    font-style: italic;
 }
 
 /*SECTION COMPETENCES*/
@@ -172,57 +193,32 @@ section > div{
 .comp p{
     flex: 0 0 40%;
 }
-.conteneur-barre{
-    flex: 0 0 60%;
-    border-radius: 5px;
-    background-color: grey;
-    border-bottom: 1px ridge grey;
-}
-.barre{
-    display: block;
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.c85{
-    width: 85%;
-    background-color: #8B8;
-}
-.c90{
-    width: 90%;
-    background-color: #4B8;
-}
-.c95{
-    width: 95%;
-    background-color: #4B8;
-}
-.c100{
-    width: 100%;
-    background-color: #4B8;
-    border-radius: 5px;
-}
-.comp2{
+
+
+#competences p{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-}
-.conteneur-barre2{
-    flex: 0 0 100%;
-    height: 0.5em;
-    margin-bottom: 0.25em;
-    border-radius: 5px;
-    background-color: grey;
+    text-align: center;
 }
 
+#competences img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
 /*SECTION INTERETS*/
-.interet{
-    flex: 0 1 50%;
+.activite{
+    flex: 0 1 20%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     margin-bottom: 20px;
+    font-size: small;
 }
-.interet img{
+.activite img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -238,8 +234,7 @@ table {
  
 td { 
  border-width:1px;
- border-style:solid; 
- border-color:red;t
+
  }
   
 .projet img{
@@ -249,7 +244,45 @@ height : 150px;
 }
 
 .projet{
-flex:0 1 20%;
-display:flex;
+	flex-wrap:wrap;
+    flex-direction: row;
+	margin:0 1.5% 1.5% 1.5%;
+	width:300px;
+	height:auto;
+	background-color: rgb(146, 220, 25);
+	color:white;
+	box-shadow:0 2px 2px rgba(0,0,0,0.2);
+	overflow:hidden;
+	text-align:center;
+	transition:all 0.25s;
+	border-radius:4px;
+	margin:20px;
+	padding:10px;
 }
-    
+   
+.projet:hover{
+	transform:translateY(-7px);
+	box-shadow:0 12px 16px rgba(0,0,0,0.2);
+}
+   
+.projet h3{
+    text-align: center;
+	font-weight:600;
+	padding: 5%;
+}
+   
+.projet p{
+	padding:0 1rem;
+	font-size:16px;
+	font-weight:300;
+    text-align: justify;
+}
+
+
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+}
+.projet>* {
+    flex: 1 1 160px;
+}
