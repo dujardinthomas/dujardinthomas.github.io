@@ -1,0 +1,541 @@
+/*STYLES GENERAUX*/
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    background-color: #00000072;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+nav {
+    background: #0e76a8;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+}
+
+
+/* SUR 2 LIGNES*/
+@media only screen and (max-width: 968px) {
+    nav {
+        height: 80px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 80px;
+    }
+
+    .titre h1 {
+        padding-top: 200px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+
+        font-size: 4em;
+        word-spacing: 4px;
+    }
+}
+
+
+/* SUR 2 LIGNES*/
+@media only screen and (max-width: 968px) {
+    nav {
+        height: 80px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 80px;
+    }
+
+    .titre h1 {
+        padding-top: 200px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+
+        font-size: 4em;
+        word-spacing: 4px;
+    }
+}
+
+
+/* SUR 3 LIGNES*/
+@media only screen and (max-width: 488px) {
+    nav {
+        height: 120px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 120px;
+    }
+
+    .titre h1 {
+        padding-top: 200px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+
+        font-size: 4em;
+        word-spacing: 4px;
+    }
+}
+
+
+/* SUR 4 LIGNES*/
+@media only screen and (max-width: 388px) {
+    nav {
+        height: 160px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 160px;
+    }
+
+    .titre h1 {
+        padding-top: 230px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+
+        font-size: 4em;
+        word-spacing: 4px;
+    }
+}
+
+/* SUR 5 LIGNES*/
+@media only screen and (max-width: 312px) {
+    nav {
+        height: 200px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 200px;
+    }
+}
+
+/* SUR 6 LIGNES*/
+@media only screen and (max-width: 286px) {
+    nav {
+        height: 240px;
+        position: absolute;
+    }
+
+    nav ul li {
+        line-height: 240px;
+    }
+}
+
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background: rgb(208, 36, 36);
+    transition: 0.8s;
+}
+
+
+
+
+/*-----------*/
+/*HEADER & FOOTER*/
+footer {
+    background-image: url("../image/illustration.jpg");
+    background-size: cover;
+    position: sticky;
+    border-bottom: 2px solid #fff;
+}
+
+
+/* baniere */
+.titre {
+    width: 100%;
+    padding-bottom: calc(18rem - 56px);
+    background-image: url(../image/illustration.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.titre h1 {
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+
+    font-size: 4em;
+    word-spacing: 4px;
+}
+
+.titre h2 {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 2em;
+    color: #f3f3f3;
+    text-transform: uppercase;
+}
+
+
+footer {
+    height: 100px;
+}
+
+footer p {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+}
+
+
+header nav {
+    z-index: 99;
+}
+
+/*--------/*
+
+/*SECTIONS*/
+section {
+    padding: 10px 0 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+
+
+    margin: 20px auto;
+    box-shadow: 0px 0px 100px rgb(208, 36, 36);
+    /*  background-color: #fff;
+  border-radius: 10px;
+   padding-bottom: 20px;
+  */
+
+
+
+}
+
+section h2 {
+    text-align: center;
+    margin: 20px 0;
+    width: 90%;
+    text-transform: uppercase;
+}
+
+
+section>div {
+    width: 90%;
+}
+
+.intro p{
+    text-align: center;
+}
+
+/*--------------------/*
+/*SECTION INFOS*/
+.photo {
+    text-align: center;
+    flex: 30%;
+}
+
+.photo img {
+    width: auto;
+    height: 200px;
+}
+
+/*boutton du cv*/
+.download a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    color: #fff;
+    background-color: #0e76a8;
+    box-shadow: 0px 0px 1px #ccc;
+    border-radius: 2px;
+}
+
+
+.presentation {
+    text-align: justify;
+    border-bottom: none;
+    margin-left: auto;
+    flex: 70%;
+}
+
+
+.presentation p {
+    margin: 10px 100px 10px 0px;
+}
+
+
+/*SECTION EXP ET FORMATION*/
+.exp {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.exp-info {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 0 90%;
+    margin-left: auto;
+}
+
+
+/* PETIT ECRAN PLUS D'ESPACE ENTRE LOGO ET TEXTE*/
+@media only screen and (max-width: 1000px) {
+    .exp-info {
+        flex: 0 0 70%;
+    }
+}
+
+
+.exp-info p {
+    font-size: small;
+}
+
+.exp-logo img {
+    max-width: 80px;
+    max-height: 200px;
+}
+
+.exp h3 {
+    font-size: 1.2em;
+}
+
+.exp h4 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*SECTION COMPETENCES*/
+
+
+#competences p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 10 30 20 30;
+}
+
+
+
+/*SECTION INTERETS*/
+.activite {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: small;
+    width: 300px;
+}
+
+.activite img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    box-shadow: 0px 0px 3px #555;
+}
+
+
+
+/* PROJETS */
+
+.projets {
+    /*parent*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projet {
+    /*chaque enfants = chaque carte*/
+    margin: 20px;
+    padding: 35px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 400px;
+    height: auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    border-radius: 10px;
+    background-color: rgb(126, 173, 50);
+    color: white;
+}
+
+.projet:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projet h3 {
+    text-align: center;
+    font-weight: 600;
+    padding: 5%;
+}
+
+.projet p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.projet img {
+    width: 100%;
+    height: 200px;
+}
+
+
+
+.projet>* {
+    flex: 1 1 160px;
+}
+
+
+.contact p {
+    text-align: center;
+}
+
+
+.reseau {
+    /*L'ensemble des boutons*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.reseau img {
+    margin-right: 1cm;
+    height: 50px;
+}
+
+
+
+.boutonReseau {
+    /*Chaque bouton*/
+    margin: 20px;
+    padding: 35px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 250px;
+    height: auto;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    border-radius: 10px;
+    background-color: rgb(126, 173, 50);
+    color: white;
+
+    padding: 1.25rem 2.5rem;
+
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 200;
+
+    background-color: #0e76a8;
+
+}
+
+
+.boutonReseau:hover {
+    background-color: #70a2b8;
+}
+
+.boutonReseau:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#arrowTop {
+    content: url(../image/fleche.png);
+    position: fixed;
+    top: 90%;
+    left: 96%;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+/* #arrowTop::before {
+            
+            height: 10%;
+            width: 10%;
+        } */
