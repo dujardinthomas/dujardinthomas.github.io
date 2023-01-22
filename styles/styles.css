@@ -111,7 +111,7 @@ nav {
 
 
 /* SUR 4 LIGNES*/
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 400px) {
     nav {
         height: 160px;
         position: absolute;
