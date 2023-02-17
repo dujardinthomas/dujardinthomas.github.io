@@ -5,11 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/styles/styles.css">
+    <script src="styles/nav.js" defer></script>
+
 </head>
 
 <body>
     <nav>
-        <ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
             <li><a class="active" href="#moi">Accueil</a></li>
             <li><a class="desactive" href="#parcours">Mes Formations</a></li>
             <li><a class="desactive" href="#competences">Mes compétences</a></li>
@@ -22,7 +29,7 @@
     <div class="titre" id="moi">
         <h1>Thomas Dujardin</h1>
         <h2>Stage en développement d'application</h2>
-        
+
     </div>
 
     <section>
@@ -47,7 +54,8 @@
             <p>
                 Curieux et ambitieux, je souhaite aujourd’hui mettre à profit mes compétences
                 et qualités humaines dans le cadre d’un stage de fin d’année d’une durée de 10 semaines à partir du 17
-                avril 2023. Etant polyvalent, je suis intéressé par les postes de développement (web ou d'application), en front, back ou
+                avril 2023. Etant polyvalent, je suis intéressé par les postes de développement (web ou d'application),
+                en front, back ou
                 full.
             </p>
         </div>
@@ -369,12 +377,15 @@
             <div class="projet">
                 <h3>Matrix</h3>
                 <p>
-                    Déploiement d'un service de messagerie instantanée chifrées de bout en bout fontionnant sous le protocole Matrix sur des machines virtuelles
-                    simulant une entreprise. Afin d'assurer une certaine sécurité, nous avons installer chaque service (la base de donnée, l'application web et matrix) sur chacune des machines. 
-                    Nous nous sommes retrouvé avec 4 machines dont une avec un reverse proxy qui permettait d'établir la connexion.
+                    Déploiement d'un service de messagerie instantanée chifrées de bout en bout fontionnant sous le
+                    protocole Matrix sur des machines virtuelles
+                    simulant une entreprise. Afin d'assurer une certaine sécurité, nous avons installer chaque service
+                    (la base de donnée, l'application web et matrix) sur chacune des machines.
+                    Nous nous sommes retrouvé avec 4 machines dont une avec un reverse proxy qui permettait d'établir la
+                    connexion.
                 </p>
                 <br>
-                    <img src="image/projets/matrix.jpg" alt="enigma config perso">
+                <img src="image/projets/matrix.jpg" alt="enigma config perso">
                 </a>
             </div>
 
