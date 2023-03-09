@@ -167,7 +167,7 @@
         </div>
 
         <figure class="activite">
-            <td><img src="image/competences/java.png"></td>
+            <td><a href="#java"><img src="image/competences/java.png"></a></td>
             <figcaption>Java</figcaption>
         </figure>
 
@@ -192,14 +192,12 @@
         </figure>
 
         <figure class="activite">
-            <img src="image/competences/html-css.png">
+            <a href="#html"><img src="image/competences/html-css.png"></a>
             <figcaption>HTML / CSS</figcaption>
         </figure>
 
-
-
         <figure class="activite">
-            <img src="image/competences/psql.png">
+            <a href="#sql"><img src="image/competences/psql.png"></a>
             <figcaption>PostgreSQL</figcaption>
         </figure>
 
@@ -214,7 +212,7 @@
         </figure>
 
         <figure class="activite">
-            <img src="image/competences/linux.png">
+            <a href="#linux"><img src="image/competences/linux.png"></a>
             <figcaption>Linux</figcaption>
         </figure>
     </section>
@@ -332,7 +330,7 @@
         <h2>Mes projets</h2>
         <div class="intro">
             <p>
-                Pendant mes années, j’ai accompli une panoplie de projets scolaires et personnels que je mets à
+                Pendant mes années, j’ai accompli une panoplie de projets scolaires et personnels dans différents languages que je mets à
                 disposition
                 sur mon gitHub dont en voici une partie :
             </p>
@@ -340,7 +338,7 @@
 
         <div class="projets">
 
-            <div class="projet">
+            <div class="projet" id="java">
                 <h3>Tutorat</h3>
                 <p>
                     Dans le cadre de l'optimisation du tutorat pour une formation, une application
@@ -373,8 +371,21 @@
                 </a>
             </div>
 
+            <div class="projet" id="sql">
+                <h3>Pizzaland API</h3>
+                <p>
+                    Nous avons crée une API REST permettant de récuperer tous les ingrédients, les pizzas et les commandes.
+                    L'ajout et la modification peut se faire uniquement identifié via l'obtention d'un token.
+                    Fonctionne dans un serveur tel que Apache Tomcat sous servlet java.
+                </p>
+                <br>
+                <a href="https://github.com/dujardinthomas/sae4.01pizzaland" target="_blank">
+                    <img src="image/projets/pizzaland.jpg" alt="Pizzaland">
+                </a>
+            </div>
 
-            <div class="projet">
+
+            <div class="projet" id="linux">
                 <h3>Matrix</h3>
                 <p>
                     Déploiement d'un service de messagerie instantanée chifrées de bout en bout fontionnant sous le
@@ -389,7 +400,7 @@
                 </a>
             </div>
 
-            <div class="projet">
+            <div class="projet" id="html">
                 <h3>TonCovoitUniv</h3>
                 <p>
                     Dans le cadre d’une politique de covoiturage, l'université nous avait demandé de créer une
@@ -417,20 +428,6 @@
                     <img src="image/projets/depinfo.png" alt="depinfo">
                 </a>
             </div>
-
-            <div class="projet">
-                <h3>Quizzy</h3>
-                <p>
-                    Nous devions créer un logiciel ludo-pédagogique à destination d’élèves d’écoles primaires,
-                    avec une interface texte, Une seule contrainte était demandé : un aspect pédagogique.
-                    Le reste était pour nous. Nous avons pensé à 3 mini-jeux dans un jeu ! Quizzy est né !
-                </p>
-                <br>
-                <a href="https://www.github.com/dujardinthomas/sae1.02quizzy" target="_blank">
-                    <img src="image/projets/quizzy.png" alt="quizzy jeu de geo">
-                </a>
-            </div>
-
 
 
         </div>
