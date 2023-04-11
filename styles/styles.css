@@ -26,6 +26,10 @@ a {
 }
 
 
+h1, h2{
+    text-align: center;
+}
+
 .titre h1 {
     padding-top: 100px;
     color: white;
@@ -408,7 +412,6 @@ section>div {
 }
 
 
-
 .projet>* {
     flex: 1 1 160px;
 }
@@ -496,3 +499,6 @@ html {
         } */
 
 
+.labo{
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+/* Styles pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  /* Styles pour les titres */
+  h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles pour les paragraphes */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Styles pour les listes */
+  ul {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+  
+  /* Styles pour les liens */
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles pour le conteneur principal */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
