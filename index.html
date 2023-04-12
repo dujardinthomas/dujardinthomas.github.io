@@ -1,21 +1,14 @@
 <html>
-
 <head>
     <title>Thomas Dujardin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="styles/nav.js" defer></script>
-
+    <script src="styles/Popup.js" defer></script>
 </head>
-
 <body>
     <nav>
-        <div class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <ul class="nav-menu">
             <li><a class="active" href="#moi">Accueil</a></li>
             <li><a class="desactive" href="#parcours">Mes Formations</a></li>
@@ -29,10 +22,9 @@
     <div class="titre" id="moi">
         <h1>Thomas Dujardin</h1>
         <h2>Stage en développement d'application</h2>
-
     </div>
 
-    <section>
+    <section id="apropos">
         <h2>A propos de moi</h2>
         <div class="photo">
             <img src="image/moi.jpg" alt="Ma photo de profil">
@@ -88,9 +80,6 @@
         </figure>
 
     </section>
-
-
-
 
     <section id="parcours">
         <h2>Mes Formations</h2>
@@ -155,7 +144,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="competences">
         <h2>Mes Compétences</h2>
@@ -330,7 +318,8 @@
         <h2>Mes projets</h2>
         <div class="intro">
             <p>
-                Pendant mes années, j’ai accompli une panoplie de projets scolaires et personnels dans différents languages que je mets à
+                Pendant mes années, j’ai accompli une panoplie de projets scolaires et personnels dans différents
+                languages que je mets à
                 disposition
                 sur mon gitHub dont en voici une partie :
             </p>
@@ -338,106 +327,80 @@
 
         <div class="projets">
 
+            <!--Pop up qui se cree pour chaque projet et recupere le texte dans html en js-->
+            <div class="popup">
+                <article class="popupContent">TEXTE PROVENANT DU JS</article>
+                    <button class="closeButton">X</button>
+            </div>
+            <!------------------------------------------------------------------------------>
+
             <div class="projet" id="java">
                 <h3>Tutorat</h3>
-                <p>
-                    Dans le cadre de l'optimisation du tutorat pour une formation, une application
-                    destinée aux professeurs à été créée par nos soins afin de générer des binômes d'étudiants
-                    en fonction de l'algorithme du plus court chemin.
-                    L'utilisateur importe les listes d'étudiants, lance l'affectation automatique
-                    et a le choix entre la validation suivie de l'exportation ou alors s'il
-                    n'est pas d'accord, a la possibilité de procéder manuellement, c'est-à-dire de
-                    dissocier ou forcer l'association de deux étudiants.
-                </p>
-                <br>
                 <a href="youtube.html?tutorat" target="_blank">
                     <img src="image/projets/tutorat.PNG" alt="tutorat">
                 </a>
+                <div class="popupShowTutorat">
+                    <a href="#">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
 
             <div class="projet">
                 <h3>Classification</h3>
-                <p>
-                    Dans le cadre d'une classification de donnée, il nous a
-                    fallu créé une application graphique
-                    permettant la classification d'un nouvel objet
-                    (une fleure ici) à partir de données déja existantes.
-                    Nous devions développer un outil de chargement, classification, affichage, et
-                    consultation d'un ensemble de données
-                </p>
-                <br>
                 <a href="https://www.github.com/dujardinthomas/sae3.02classification" target="_blank">
                     <img src="image/projets/classification.PNG" alt="Classification">
                 </a>
+                <div class="popupShowClassification">
+                    <a href="#">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
 
             <div class="projet" id="sql">
                 <h3>Pizzaland API</h3>
-                <p>
-                    Nous avons crée une API REST permettant de récuperer tous les ingrédients, les pizzas et les commandes.
-                    L'ajout et la modification peut se faire uniquement identifié via l'obtention d'un token.
-                    Fonctionne dans un serveur tel que Apache Tomcat sous servlet java.
-                </p>
-                <br>
                 <a href="https://github.com/dujardinthomas/sae4.01pizzaland" target="_blank">
                     <img src="image/projets/pizzaland.jpg" alt="Pizzaland">
                 </a>
+                <div class="popupShowAPI">
+                    <a href="#">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
-
 
             <div class="projet" id="linux">
                 <h3>Matrix</h3>
-                <p>
-                    Déploiement d'un service de messagerie instantanée chifrées de bout en bout fontionnant sous le
-                    protocole Matrix sur des machines virtuelles
-                    simulant une entreprise. Afin d'assurer une certaine sécurité, nous avons installer chaque service
-                    (la base de donnée, l'application web et matrix) sur chacune des machines.
-                    Nous nous sommes retrouvé avec 4 machines dont une avec un reverse proxy qui permettait d'établir la
-                    connexion.
-                </p>
                 <br>
                 <img src="image/projets/matrix.jpg" alt="enigma config perso">
                 </a>
+                <div class="popupShowMatrix">
+                    <a href="#">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
 
             <div class="projet" id="html">
                 <h3>TonCovoitUniv</h3>
-                <p>
-                    Dans le cadre d’une politique de covoiturage, l'université nous avait demandé de créer une
-                    plateforme de covoiturage afin de favoriser les déplacements en groupe au sein
-                    de l'université : TonCovoitUniv est crée !
-                    Le site permet de mettre en relation les étudiants qui propose un trajet avec ceux qui en
-                    demandaient.
-                </p>
-                <br>
                 <a href="/youtube.html?toncovoituniv" target="_blank">
                     <img src="image/projets/toncovoituniv.png" alt="toncovoituniv">
                 </a>
+                <div class="popupShowTonCovoitUniv">
+                    <a href="">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
 
             <div class="projet">
                 <h3>Dep Info</h3>
-                <p>
-                    Dans le cadre d’une création d’entreprise, nous devions en binôme créer notre entreprise.
-                    Pour cela, nous avons tout imaginé ; le nom, ses services, son implantation… et son site web !
-                    L’entreprise DepInfo fût crée avec à sa tête 2 jeunes personnages fictifs :
-                    Siana Lefebvre et Marc Johns.
-                </p>
-                <br>
                 <a href="https://dujardinthomas.github.io/sae1.06dep_info/" target="_blank">
                     <img src="image/projets/depinfo.png" alt="depinfo">
                 </a>
+                <div class="popupShowDepInfo">
+                    <a href="#">Cliquez ici pour en savoir plus...</a>
+                </div>
             </div>
-
-
         </div>
+
         <div class="labo">
             <button><a href="/labo.html">Accédez à mon laboratoire</a></button>
-            
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>Me contacter</h2>
         <p>Actuellement à la recherche d'un stage de 10 semaines, je suis intéressé par les postes de développeur front,
             back, full</p>
@@ -465,7 +428,6 @@
     <footer>
     </footer>
 
-
     <!--Fleche qui remonte la page-->
     <div id="arrowTop" hidden></div>
     <script>
@@ -479,5 +441,4 @@
     </script>
 
 </body>
-
 </html>

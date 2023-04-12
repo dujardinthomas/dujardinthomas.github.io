@@ -412,6 +412,42 @@ section>div {
 }
 
 
+.popup {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color:rgba(0,0,0,.5);
+	z-index: 1;
+	backdrop-filter: blur(3px);
+}
+.popup.visible {
+	display: block;
+	animation: slideUp .4s cubic-bezier(0.165, 0.84, 0.44, 1), fadeIn .3s cubic-bezier(0.19, 1, 0.22, 1);
+	animation-fill-mode: both;
+}
+.popup .popupContent {
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+	background: white;
+	border-radius: 4px;
+	color: black;
+	margin: 0 100px;
+	position: relative;
+	padding: 10px 50px 20px;
+}
+.popup .closeButton {
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	padding: 10px;
+	border-style: outset;
+}
+
+
 .projet>* {
     flex: 1 1 160px;
 }

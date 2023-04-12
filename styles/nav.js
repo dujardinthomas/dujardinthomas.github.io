@@ -15,3 +15,4 @@ navLinks.forEach(link => {
       navMenu.classList.remove('active');
     });
   });
+
