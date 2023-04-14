@@ -453,6 +453,24 @@ section>div {
 }
 
 
+
+.soustitre{
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #133eda;
+}
+
+.objectif{
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #133eda;
+}
+
+
+
+
 .contact p {
     text-align: center;
 }
