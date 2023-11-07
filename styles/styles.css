@@ -436,6 +436,7 @@ section>div {
 	background-color:rgba(0,0,0,.5);
 	z-index: 1;
 	backdrop-filter: blur(3px);
+    overflow: auto;
 }
 .popup.visible {
 	display: block;
