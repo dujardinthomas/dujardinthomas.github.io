@@ -474,6 +474,7 @@ section>div {
     text-align: center;
     text-transform: uppercase;
     color: #133eda;
+    text-decoration: underline;
 }
 
 .objectif{
@@ -553,13 +554,22 @@ html {
 
 #arrowTop {
     content: url(../image/fleche.png);
+    opacity: 0.5;
     position: fixed;
-    top: 90%;
-    left: 96%;
+    top: 94%;
+    left: 98%;
     cursor: pointer;
-    height: 40px;
-
+    height: 25px;
+    
 }
+
+@media (max-width: 800px) {
+    #arrowTop {
+        top: 94%;
+        left: 92%;
+    }
+}
+
 
 /* #arrowTop::before {
             

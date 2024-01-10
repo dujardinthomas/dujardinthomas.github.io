@@ -2,8 +2,10 @@ const modal1 = document.querySelector('.popupShowTutorat');
 const modal2 = document.querySelector('.popupShowClassification');
 const modal3 = document.querySelector('.popupShowAPI');
 const modal4 = document.querySelector('.popupShowMatrix');
-const modal5 = document.querySelector('.popupShowTonCovoitUniv');
+// const modal5 = document.querySelector('.popupShowTonCovoitUniv');
 const modal6 = document.querySelector('.popupShowDepInfo');
+const modal7 = document.querySelector('.popupShowUniplanify');
+
 
 let popupContent = document.querySelector('.popupContent');
 
@@ -28,13 +30,17 @@ modal4.addEventListener('click', event => {
 });
 
 
-modal5.addEventListener('click', event => {
-	showPopup(event, 'tonCovoitUniv.html');
-});
+// modal5.addEventListener('click', event => {
+// 	showPopup(event, 'tonCovoitUniv.html');
+// });
 
 
 modal6.addEventListener('click', event => {
 	showPopup(event, 'depInfo.html');
+});
+
+modal7.addEventListener('click', event => {
+	showPopup(event, 'uniplanify.html');
 });
 
 
