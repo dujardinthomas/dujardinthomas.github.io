@@ -387,12 +387,12 @@ section>div {
 
 .projet {
     /*chaque enfants = chaque carte*/
-    margin: 20px;
-    padding: 35px;
+    margin: 10px;
+    padding: 15px;
     flex-wrap: wrap;
     flex-direction: row;
     width: 400px;
-    height: auto;
+    height: 300px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
@@ -400,6 +400,11 @@ section>div {
     border-radius: 10px;
     background-color: rgb(126, 173, 50);
     color: white;
+}
+
+.projet div {
+    color: white;
+    text-decoration: underline;
 }
 
 .projet:hover {
@@ -452,7 +457,7 @@ section>div {
 	color: black;
 	margin: 0 100px;
 	position: relative;
-	padding: 10px 50px 20px;
+	padding: 10px 20px 20px;
 }
 .popup .closeButton {
 	position: absolute;
@@ -461,6 +466,8 @@ section>div {
 	padding: 10px;
 	border-style: outset;
 }
+
+
 
 
 .projet>* {

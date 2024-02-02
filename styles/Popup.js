@@ -62,13 +62,16 @@ function showPopup(event, projet) {
 
 	window.addEventListener("click", function (event) {
 		if (event.target == popup) {
+			
 			popup.close()
 		}
 	});
 
 	window.addEventListener("keydown", function(event) {
-			popup.close();  //quand échap
-	  }); 
+		if (event.key === "Escape") {
+			popup.close();
+		}
+	});
 }
 
 class Popup {
