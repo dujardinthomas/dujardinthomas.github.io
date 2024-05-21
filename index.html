@@ -46,7 +46,7 @@
     </div>
 
     <section id="apropos">
-        <h2>Hellooo, moi c'est Thomas 👋</h2>
+        <h2 class="animated-text">Hellooo, moi c'est Thomas 👋</h2>
         <div class="photo">
             <img src="image/moi2.jpg" alt="Ma photo de profil">
         </div>
@@ -77,7 +77,7 @@
 
         <section>
         <div class="activites"></div>
-        <h2>Centres d'intérêts</h2>
+        <h2 class="animated-text">Mes centres d'intérêts</h2>
         <figure class="activite">
             <div class="wrapper">
                 <img src="image/interet/tennis.JPG" alt="Tennis">
@@ -109,7 +109,7 @@
     </section>
 
     <section id="parcours">
-        <h2>Mes Formations</h2>
+        <h2 class="animated-text">Mes Formations</h2>
         <div class="exp">
             <div class="exp-logo">
                 <a href="https://iut.univ-lille.fr/choisir-sa-formation?tx_ulcof_cof%5Baction%5D=show&tx_ulcof_cof%5Bcontroller%5D=ListFormation&tx_ulcof_cof%5BformItem%5D=fr-00082372" target="_blank">
@@ -173,7 +173,7 @@
     </section>
 
     <section id="competences">
-        <h2>Mes Compétences</h2>
+        <h2 class="animated-text">Mes Compétences</h2>
         <div class="intro">
             <p>
                 Pendant mes études et mes temps libres, j’ai pu apprendre à manipuler de nombreux outils et de
@@ -285,7 +285,7 @@
     </section>
 
     <section id="experience">
-        <h2>Mes Expériences professionnelles</h2>
+        <h2 class="animated-text">Mes Expériences professionnelles</h2>
         <div class="exp">
 
             <div class="exp-desc">
@@ -446,7 +446,7 @@
     </section>
 
     <section id="realisation">
-        <h2>Mes réalisations</h2>
+        <h2 class="animated-text">Mes réalisations</h2>
         <div class="intro">
             <p>
                 Pendant mes années, j’ai accompli une panoplie de projets scolaires et personnels dans différents
@@ -558,7 +558,7 @@
     </section>
 
     <section id="contact">
-        <h2>Me contacter</h2>
+        <h2 class="animated-text">Me contacter</h2>
         <p></p>
         <div class="contact" id="contact">
             <div class="reseau">
@@ -594,6 +594,26 @@
         window.addEventListener('scroll', function () {
             arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
         });
+    </script>
+
+    <!-- sous titres pour chaque compétences qui apparait en fondu au scroll  -->
+    <script>
+        var elements = document.querySelectorAll('.animated-text');
+        // Créez un nouvel observateur d'intersection
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // Si l'élément est visible à l'écran
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                } else {
+                    entry.target.classList.remove('fade-in');
+                }
+            });
+        }, {
+            // Déclenchez l'observateur lorsque l'élément est à 50% visible
+            threshold: 0.5
+        });
+        elements.forEach(element => observer.observe(element));
     </script>
 
 </body>
