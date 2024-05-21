@@ -165,7 +165,6 @@ footer {
     background-image: url("../image/illustration.jpg");
     background-size: cover;
     position: sticky;
-    border-bottom: 2px solid #fff;
 }
 
 
@@ -216,21 +215,11 @@ section {
     width: 100%;
 
     background-color: rgb(255, 255, 255);
-
-    margin: 20px auto;
-    box-shadow: 0px 0px 100px rgb(208, 36, 36);
-    /*  background-color: #fff;
-  border-radius: 10px;
-   padding-bottom: 20px;
-  */
-
-
-
 }
 
 /* une section sur 2 sera plus foncé */
 section:nth-child(even) {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(230, 230, 230);
 }
 
 section h2 {
@@ -532,7 +521,7 @@ section>div {
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;
-    border-radius: 10px;
+    border-radius: 100px;
     background-color: rgb(126, 173, 50);
     color: white;
 
@@ -548,7 +537,7 @@ section>div {
 
 
 .boutonReseau:hover {
-    background-color: #70a2b8;
+    background-color: #0f89c2;
 }
 
 .boutonReseau:active {
