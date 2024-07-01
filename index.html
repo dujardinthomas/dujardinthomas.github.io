@@ -46,7 +46,24 @@
     </div>
 
     <section id="apropos">
-        <h2 class="animated-text">Hellooo, moi c'est Thomas 👋</h2>
+        <h2 class="animated-text hello">Hellooo, moi c'est Thomas <span class="emoji">👋</span></h2>
+
+        <!-- quand la souris est sur le h2, bouge l'emoji coucou -->
+        <script> 
+            document.addEventListener('DOMContentLoaded', () => {
+                const introText = document.querySelector('.hello');
+                const emoji = document.querySelector('.emoji');
+
+                introText.addEventListener('mouseenter', () => {
+                    emoji.classList.add('animate');
+                });
+
+                introText.addEventListener('mouseleave', () => {
+                    emoji.classList.remove('animate');
+                });
+            });
+        </script>
+
         <div class="photo">
             <img src="image/moi2.jpg" alt="Ma photo de profil">
         </div>
