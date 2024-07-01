@@ -444,13 +444,12 @@ section>div {
 	animation-fill-mode: both;
 }
 .popup .popupContent {
+    top: 10%;
 	margin: 0 auto;
-	top: 50%;
-	transform: translateY(-50%);
 	background: white;
 	border-radius: 4px;
 	color: black;
-	margin: 0 100px;
+	margin: 0 50px;
 	position: relative;
 	padding: 10px 20px 20px;
 }
@@ -596,4 +595,20 @@ html {
 }
 .fade-in {
     animation: fade-in 2s ease-in-out;
+}
+
+
+.competences {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.competence img {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #555;
 }
