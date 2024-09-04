@@ -619,6 +619,7 @@ html {
     font-size: 30px;
     margin-left: 10px;
     transition: transform 0.3s ease;
+    animation: wave 2s normal;
 }
 
 @keyframes wave {
