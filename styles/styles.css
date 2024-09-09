@@ -11,10 +11,6 @@
 
 }
 
-/* body {
-    background-color: #00000072;
-} */
-
 p {
     font-size: 1em;
     line-height: 1.5em;
@@ -25,42 +21,12 @@ a {
     color: #000;
 }
 
-
-h1, h2{
-    text-align: center;
-}
-
-.titre h1 {
-    padding-top: 100px;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-
-
-    font-size: 4em;
-    word-spacing: 4px;
-}
-
-.titre h2 {
-    padding-top: 40px;
-    text-align: center;
-    font-size: 2em;
-    color: #f3f3f3;
-    text-transform: uppercase;
-}
-
-
-
-
 nav {
     background: #0e76a8;
     height: 40px;
     width: 100%;
     position: fixed;
 }
-
-
-
 
 
 nav ul {
@@ -125,7 +91,7 @@ a:hover {
     font-weight: bold;
   }
   
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1040px) {
     .nav-toggle {
       display: block;
       cursor: pointer;
@@ -168,20 +134,79 @@ footer {
 }
 
 
-/* baniere */
 .titre {
     width: 100%;
-    padding-bottom: calc(18rem - 56px);
-    background-image: url(../image/illustration.jpg);
+    height: 100vh;
+    background-image: url(../image/pc.JPG);
     background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte */
+    white-space: normal; /* Permet de revenir à la ligne */
+}
+
+.titre h1,
+.titre h2 {
+    margin: 30; /* Retire les marges par défaut */
+    color: white; /* Couleur du texte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre noire légère */
+}
+
+.titre h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 
+.titre h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media only screen and (max-width: 480px) { 
+    .titre h1 { 
+        font-size: 3em; 
+    }
+
+    .titre h2 { 
+        font-size: 2em; 
+    } 
+}
+
+/* fleche vers le bas qui bouge incitant à me découvrir */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.scroll-down i {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
 
 
 footer {
@@ -572,13 +597,6 @@ html {
 }
 
 
-/* #arrowTop::before {
-            
-            height: 10%;
-            width: 10%;
-        } */
-
-
 .labo{
     text-align: center;
 }
@@ -632,4 +650,30 @@ html {
 
 .emoji.animate {
     animation: wave 1s infinite;
+}
+
+
+/* animation des mots clés d'intro de présentation */
+.fade-in-out {
+    animation: erase 4s ease-in-out infinite;
+    white-space: normal;
+}
+
+@keyframes erase {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 1;
+    }
+    40% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+    60% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 1;
+    }
 }

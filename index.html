@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="styles/nav.js" defer></script>
     <script src="styles/Popup.js" defer></script>
-
+    <!-- pour les icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9ZGR9H841"></script>
@@ -42,7 +43,21 @@
 
     <div class="titre" id="moi">
         <h1>Thomas Dujardin</h1>
-        <h2>Développeur Full Stack</h2>
+        <h2 id="dynamic-title">Je suis <span class="fade-in-out" id="current-role"></span></h2>
+        <script>
+            const roles = ['développeur full stack', 'développeur front', 'développeur back', 'informaticien', 'manager d\'équipe', 'polyvalent !', 'DISPONIBLE !', 'votre futur alternant !'];
+            let index = 0;
+            document.getElementById('current-role').textContent = roles[index];
+            function changeRole() {
+            document.getElementById('current-role').textContent = roles[index];
+            index = (index + 1) % roles.length;
+            }
+            setInterval(changeRole, 4010);
+        </script>
+        <div class="scroll-down">
+            <a href="#apropos"><i class="fas fa-chevron-down"></i></a>
+        </div>
+        
     </div>
 
     <section id="apropos">
@@ -62,6 +77,7 @@
                     emoji.classList.remove('animate');
                 });
             });
+            document.querySelector('.emoji').classList.add('animate');
         </script>
 
         <div class="photo">
@@ -321,9 +337,15 @@
                 <h3>Développeur WEB</h3>
                 <h4>KPF-SI - Lille</h4>
                 <h4>Mars 2024 - Juin 2024</h4>
-                <p>J'ai été intégré dans le centre de service dans le but d'assurer de la maintenance corrective, évolutive et préventive sur les applications et framework internes à l'entreprises.</p>
-                <p>Ma principale mission fut de recréer un nouveau design pour une application de gestion des compétences des collaborateurs en passant par les phases d'analyses, de maquettages, de tests et de documentations.
-                Utilisation d'<strong>AngularJS</strong>, <strong>Docker</strong> et <strong>Git</strong></p>
+
+                <p>Dans le cadre de mon stage de fin de BUT, j'ai été intégré dans le centre de service de l'ESN lilloise.</p>
+                <p>
+                    Ma principale mission fut de recréer un nouveau design pour une application de gestion des compétences des collaborateurs en passant par les phases d'analyses, de maquettages, de tests et de documentations.
+                </p>
+                <p>
+                    Enfin, j'ai participé à la maintenance corrective, évolutive et préventive des applications et frameworks internes à l'entreprise avec une nouvelle organisation Agile.
+                    Utilisation d'<strong>AngularJS</strong>, <strong>Spring</strong>, <strong>NodeJS</strong>, <strong>Docker</strong> et <strong>Git</strong>
+                </p>
             </div>
         </div>
 
@@ -338,11 +360,14 @@
                 <h3>Développeur Full Stack</h3>
                 <h4>Comité Nord Plants de Pomme de Terre - Achicourt (62)</h4>
                 <h4>Avril 2023 - Juin 2023</h4>
-                <p>Dans le cadre de mon stage de BUT2, j'ai été chargé de mettre en place une nouvelle forme de communication directe entre l'association et les producteurs de pommes de terre.</p>
-                <p>L'objectif était de rendre consultable peu importe le moment, toutes les données métiers de chaque producteur de manière sécurisés sur une nouvelle page de l'intranet de l'association.
-                    Pour atteindre cet objectif, j'ai entièrement créé et développé un nouveau plugin pour le site basé sur le CMS WordPress avec <strong>PHP</strong>, 
-                    ainsi que les langages <strong>HTML/CSS</strong>, <strong>SQL</strong> et <strong>JS</strong>. J'ai également intégré différentes <strong>API</strong> 
-                    et mis en place des fonctionnalités d'exportation des données en <strong>CSV</strong>, <strong>KML</strong>, <strong>PDF</strong> et de mises à jour pour l'administrateur.
+                <p>Au cours de mon stage de BUT2, j'ai été chargé de développer une solution de communication directe entre l'association et les producteurs de pommes de terre.</p>
+                <p>
+                    Mon objectif était de rendre les données métier de chaque producteur accessibles à tout moment, de manière sécurisée, via l'intranet de l'association. 
+                    Pour cela, j'ai conçu et développé un plugin complet pour le site WordPress, en utilisant <strong>PHP</strong> couplé avec les langages <strong>HTML</strong>, <strong>CSS</strong>, <strong>SQL</strong> et <strong>JavaScript</strong>. 
+                    J'ai également intégré diverses API et mis en place des fonctionnalités d'exportation des données au format <strong>CSV</strong>, <strong>KML</strong>, et <strong>PDF</strong>, ainsi que des outils de mise à jour pour les administrateurs.
+                </p>
+                <p>
+                    En outre, j'ai assuré la démonstration de la nouvelle application aux utilisateurs pour garantir son adoption et son utilisation efficace.
                 </p>
             </div>
         </div>
@@ -357,9 +382,10 @@
                 <h3>Responsable de point de vente + équipier</h3>
                 <h4>Topivo Restauration - Décathlon Arena Stade Pierre Mauroy (59) | Paris La Défense Arena (92) | Le Parc des Princes (75)</h4>
                 <h4>Depuis Août 2022</h4>
-                <p>Management d'une petite équipe de vente lors d'évènements sportifs et concerts dans les stades de Lille et Paris.</p>
-                <p>Gestion d'un point de vente en GP/VIP</p>
-                <p>Gestion des stocks, préparation des commandes, gestion des caisses, organisation du parcours client</p>
+                <p><strong>Management</strong> d'une petite équipe de vente lors d'évènements sportifs et concerts dans les stades de Lille et Paris,</p>
+                <p><strong>Gestion</strong> d'un point de vente en GP/VIP,</p>
+                <p><strong>Gestion</strong> des stocks, préparation des commandes, gestion des caisses,</p>
+                <p><strong>Optimisation</strong> du parcours client</p>
             </div>
         </div>
 
@@ -378,7 +404,7 @@
                         Pendant les vacances d'été scolaires de 2021, j'ai participé au bon fonctionnement du centre aéré en
                         animant les journées des enfants, du matin au soir en passant par le midi. J'ai été principalement dans le groupe des 3-5 ans.
                     </p>
-                    <p>    Ces 3 semaines m'ont permis de mettre en pratique tout ce qui m'a été appris pendant ma formation et obtenir mon diplôme du BAFA.
+                    <p>    Ces 3 semaines m'ont permis de mettre en pratique tout ce qui m'a été appris pendant ma formation et obtenir mon diplôme du <strong>BAFA</strong>.
                     </p>
                 </div>
             </div>
@@ -400,7 +426,7 @@
                     <p>
                         En classe de seconde générale et technologique, j'ai pu pendant une semaine être en observation
                         dans une start-up de perfectionnement
-                        sur les sites web d'e-commerce (proposer des recommandations de produits personnalisés à leurs
+                        sur les sites web <strong>d'e-commerce </strong> (proposer des recommandations de produits personnalisés à leurs
                         clients). 
                     </p>
                 </div>
