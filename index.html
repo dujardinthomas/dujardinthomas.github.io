@@ -32,12 +32,12 @@
         </div>
         <!------------------------->
         <ul class="nav-menu">
-            <li><a class="active" href="#moi">Accueil</a></li>
-            <li><a class="desactive" href="#parcours">Mes Formations</a></li>
-            <li><a class="desactive" href="#competences">Mes compétences</a></li>
-            <li><a class="desactive" href="#experience">Mes expériences</a></li>
-            <li><a class="desactive" href="#realisation">Mes réalisations</a></li>
-            <li><a class="active" href="#contact">Me contacter</a></li>
+            <li><a href="#moi">Accueil</a></li>
+            <li><a href="#parcours">Mes Formations</a></li>
+            <li><a href="#competences">Mes compétences</a></li>
+            <li><a href="#experience">Mes expériences</a></li>
+            <li><a href="#realisation">Mes réalisations</a></li>
+            <li><a href="#contact">Me contacter</a></li>
         </ul>
     </nav>
 
@@ -46,8 +46,8 @@
         <h2 id="dynamic-title">Je suis <span class="fade-in-out" id="current-role"></span></h2>
         <script>
             const roles = ['développeur full stack', 'développeur front', 'développeur back', 'informaticien', 'manager d\'équipe', 'polyvalent !', 'DISPONIBLE !', 'votre futur alternant !'];
-            let index = 0;
-            document.getElementById('current-role').textContent = roles[index];
+            let index = 1;
+            document.getElementById('current-role').textContent = roles[index - 1];
             function changeRole() {
             document.getElementById('current-role').textContent = roles[index];
             index = (index + 1) % roles.length;
@@ -213,125 +213,113 @@
             </p>
         </div>
 
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#java"><img src="image/competences/java.png"></a>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="langages">Langages</button>
+            <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+            <button class="filter-btn" data-filter="outils">Outils</button>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const filterButtons = document.querySelectorAll('.filter-btn');
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+                        });
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="skills">
+            <div class="skill" data-category="langages">
+                <a href="#java"><img src="image/competences/java.png" alt="java"></a>
+                <div class="labelSkill">Java</div>
             </div>
-            <figcaption>Java</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#spring"><img src="image/competences/spring.png"></a>
+            <div class="skill" data-category="frameworks">
+                <a href="#spring"><img src="image/competences/spring.png" alt="spring"></a>
+                <div class="labelSkill">Spring</div>
             </div>
-            <figcaption>Spring</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#angular"><img src="image/competences/angular.png"></a>
+            <div class="skill" data-category="langages">
+                <a href="#js"><img src="image/competences/js.png" alt="js"></a>
+                <div class="labelSkill">JavaScript</div>
             </div>
-            <figcaption>Angular</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#react"><img src="image/competences/react.png"></a>
+            <div class="skill" data-category="frameworks">
+                <a href="#react"><img src="image/competences/react.png" alt="react"></a>
+                <div class="labelSkill">React</div>
             </div>
-            <figcaption>React</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/js.png">
+            <div class="skill" data-category="frameworks">
+                <a href="#angular"><img src="image/competences/angular.png" alt="angular"></a>
+                <div class="labelSkill">Angular</div>
             </div>
-            <figcaption>JavaScript</figcaption>
-        </figure>
-
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#php"><img src="image/competences/php.png"></a>
+            <div class="skill" data-category="langages">
+                <a href="#php"><img src="image/competences/php.png" alt="php"></a>
+                <div class="labelSkill">Php</div>
             </div>
-            <figcaption>PHP</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#sql"><img src="image/competences/psql.png"></a>
+            <div class="skill" data-category="frameworks">
+                <a href="#symfony"><img src="image/competences/symfony.png" alt="Symfony"></a>
+                <div class="labelSkill">Symfony</div>
             </div>
-            <figcaption>PostgreSQL</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#html"><img src="image/competences/html-css.png"></a>
+            <div class="skill" data-category="langages">
+                <a href="#html"><img src="image/competences/html-css.png" alt="html-css"></a>
+                <div class="labelSkill">HTML-CSS</div>
             </div>
-            <figcaption>HTML / CSS</figcaption>
-        </figure>
-
-
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/eclipse.png">
+            <div class="skill" data-category="langages">
+                <a href="#c"><img src="image/competences/c.png" alt="c"></a>
+                <div class="labelSkill">C</div>
             </div>
-            <figcaption>Eclipse</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/vscode.png">
+            <div class="skill" data-category="langages">
+                <a href="#sql"><img src="image/competences/sql.png" alt="sql"></a>
+                <div class="labelSkill">SQL</div>
             </div>
-            <figcaption>VS Code</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/git.png">
+            <div class="skill" data-category="langages">
+                <a href="#powershell"><img src="image/competences/powershell.png" alt="powershell"></a>
+                <div class="labelSkill">PowerShell</div>
             </div>
-            <figcaption>Git</figcaption>
-        </figure>
-
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/office.png">
+            <div class="skill" data-category="outils">
+                <a href="#windows"><img src="image/competences/windows.png" alt="php"></a>
+                <div class="labelSkill">Windows</div>
             </div>
-            <figcaption>Microsoft Office</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <img src="image/competences/windows.png">
+            <div class="skill" data-category="outils">
+                <a href="#linux"><img src="image/competences/linux.png" alt="Symfony"></a>
+                <div class="labelSkill">Linux</div>
             </div>
-            <figcaption>Windows</figcaption>
-        </figure>
-
-        <figure class="activite">
-            <div class="wrapper">
-                <a href="#linux"><img src="image/competences/linux.png"></a>
+            <div class="skill" data-category="outils">
+                <a href="#docker"><img src="image/competences/docker.png" alt="docker"></a>
+                <div class="labelSkill">Docker</div>
             </div>
-            <figcaption>Linux</figcaption>
-        </figure>
+            <div class="skill" data-category="outils">
+                <a href="#nginx"><img src="image/competences/nginx.png" alt="nginx"></a>
+                <div class="labelSkill">Nginx</div>
+            </div>
+            <div class="skill" data-category="outils">
+                <a href="#git"><img src="image/competences/git.png" alt="html"></a>
+                <div class="labelSkill">Git</div>
+            </div>
+            <div class="skill" data-category="outils">
+                <a href="#office"><img src="image/competences/office.png" alt="office"></a>
+                <div class="labelSkill">Office 365</div>
+            </div>
+            <div class="skill" data-category="outils">
+                <a href="#vscode"><img src="image/competences/vscode.png" alt="vscode"></a>
+                <div class="labelSkill">VS Code</div>
+            </div>
+            <div class="skill" data-category="outils">
+                <a href="#agile"><img src="image/competences/agile.png" alt="agile"></a>
+                <div class="labelSkill">Méthode Agile</div>
+            </div>
+        </div>        
     </section>
 
     <section id="experience">
         <h2 class="animated-text">Mes Expériences professionnelles</h2>
-        <div class="exp">
-
-            <div class="exp-desc">
-                </p>
-
-            </div>
-        </div>
-
+        <div class="exp"></div>  <!-- pour le trait -->
 
         <div class="exp" id="php">
-            <div class="exp-logo">
-                <div class="wrapper">
-                    <img src="image/exp/kpf.png" alt="kpf">
-                </div>
+            <div class="exp-logo wrapper">
+                <img src="image/exp/kpf.png" alt="kpf">
             </div>
             <div class="exp-info" id="angular">
                 <h3>Développeur WEB</h3>
@@ -351,10 +339,8 @@
 
 
         <div class="exp" id="php">
-            <div class="exp-logo">
-                <div class="wrapper">
-                    <img src="image/exp/comitenord.png" alt="comitenord">
-                </div>
+            <div class="exp-logo wrapper">
+                <img src="image/exp/comitenord.png" alt="comitenord">
             </div>
             <div class="exp-info">
                 <h3>Développeur Full Stack</h3>
@@ -373,13 +359,11 @@
         </div>
 
         <div class="exp">
-            <div class="exp-logo">
-                <div class="wrapper">
-                    <img src="image/exp/topivo.png" alt="Topivo">
-                </div>
+            <div class="exp-logo wrapper">
+                <img src="image/exp/topivo.jpg" alt="Topivo">
             </div>
             <div class="exp-info">
-                <h3>Responsable de point de vente + équipier</h3>
+                <h3>Responsable de point de vente</h3>
                 <h4>Topivo Restauration - Décathlon Arena Stade Pierre Mauroy (59) | Paris La Défense Arena (92) | Le Parc des Princes (75)</h4>
                 <h4>Depuis Août 2022</h4>
                 <p><strong>Management</strong> d'une petite équipe de vente lors d'évènements sportifs et concerts dans les stades de Lille et Paris,</p>
@@ -390,10 +374,8 @@
         </div>
 
         <div class="exp">
-            <div class="exp-logo">
-                <div class="wrapper">
-                    <img src="image/exp/nieppe.png" alt="CVL Nieppe">
-                </div>
+            <div class="exp-logo wrapper">
+                <img src="image/exp/nieppe.png" alt="CVL Nieppe">
             </div>
             <div class="exp-info">
                 <h3>Animateur Enfants</h3>
@@ -411,11 +393,9 @@
         </div>
 
         <div class="exp">
-            <div class="exp-logo">
+            <div class="exp-logo wrapper">
                 <a href="https://www.attraqt.com/fr/a-propos/nous/" target="_blank">
-                    <div class="wrapper">
-                        <img src="/image/exp/early-birds.png" alt="Early-birds">
-                    </div>
+                    <img src="/image/exp/early-birds.png" alt="Early-birds">
                 </a>
             </div>
             <div class="exp-info">
@@ -434,11 +414,9 @@
         </div>
 
         <div class="exp">
-            <div class="exp-logo">
+            <div class="exp-logo wrapper">
                 <a href="https://www.boulanger.com" target="_blank">
-                    <div class="wrapper">
-                        <img src="image/exp/boulanger.png" alt="Boulanger">
-                    </div>
+                    <img src="image/exp/boulanger.png" alt="Boulanger">
                 </a>
             </div>
             <div class="exp-info">
@@ -460,12 +438,9 @@
         </div>
 
         <div class="exp">
-            <div class="exp-logo">
+            <div class="exp-logo wrapper">
                 <a href="https://www.setg.fr" target="_blank">
-                    <div class="wrapper"> 
-                        <img src="image/exp/setg.png" alt="SETG">
-                    </div>
-                    
+                    <img src="image/exp/setg.png" alt="SETG">
                 </a>
             </div>
             <div class="exp-info">
