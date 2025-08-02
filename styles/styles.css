@@ -16,6 +16,15 @@ p {
     line-height: 1.5em;
 }
 
+ul {
+    font-size: 12px;
+}
+
+li{
+    list-style: disc inside;
+}
+
+
 a {
     text-decoration: none;
     color: #000;

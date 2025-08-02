@@ -5,6 +5,7 @@ const modal4 = document.querySelector('.popupShowMatrix');
 // const modal5 = document.querySelector('.popupShowTonCovoitUniv');
 const modal6 = document.querySelector('.popupShowDepInfo');
 const modal7 = document.querySelector('.popupShowUniplanify');
+const modal8 = document.querySelector('.popupShowParkMEL');
 
 
 let popupContent = document.querySelector('.popupContent');
@@ -41,6 +42,10 @@ modal6.addEventListener('click', event => {
 
 modal7.addEventListener('click', event => {
 	showPopup(event, 'uniplanify.html');
+});
+
+modal8.addEventListener('click', event => {
+	showPopup(event, 'parkmel.html');
 });
 
 
