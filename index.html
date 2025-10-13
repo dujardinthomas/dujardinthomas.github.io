@@ -228,23 +228,10 @@
         </div>
 
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="langages">Langages</button>
-            <button class="filter-btn" data-filter="frameworks">Frameworks</button>
-            <button class="filter-btn" data-filter="outils">Outils</button>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const filterButtons = document.querySelectorAll('.filter-btn');
-
-                    filterButtons.forEach(button => {
-                        button.addEventListener('click', () => {
-                            filterButtons.forEach(btn => btn.classList.remove('active'));
-                            button.classList.add('active');
-                        });
-                    });
-                });
-            </script>
+            <button class="competences-filter-btn active" data-filter="all">Tous</button>
+            <button class="competences-filter-btn" data-filter="langages">Langages</button>
+            <button class="competences-filter-btn" data-filter="frameworks">Frameworks</button>
+            <button class="competences-filter-btn" data-filter="outils">Outils</button>
         </div>
 
         <div class="skills">
@@ -511,6 +498,13 @@
             </p>
         </div>
 
+        <div class="filters">
+            <button class="projets-filter-btn active" data-filter="all">Tous</button>
+            <button class="projets-filter-btn" data-filter="web">Web</button>
+            <button class="projets-filter-btn" data-filter="desktop">Desktop</button>
+            <button class="projets-filter-btn" data-filter="systeme">Système</button>
+        </div>
+
         <div class="projets">
 
             <!--Pop up qui se cree pour chaque projet et recupere le texte dans html en js-->
@@ -522,7 +516,7 @@
 
             
             <a href="#">
-                <div class="projet" id="vue">
+                <div class="projet" id="vue" data-category="web">
                     <div class="popupShowParkMEL">
                         <h3>ParkMEL</h3>
                     </div>
@@ -535,7 +529,7 @@
             
             
             <a href="#">
-                <div class="projet" id="spring">
+                <div class="projet" id="spring" data-category="web">
                     <div class="popupShowUniplanify">
                         <h3>UniPlanify</h3>
                     </div>
@@ -547,7 +541,7 @@
             </a>
             
             <a href="#">
-                <div class="projet" id="java">
+                <div class="projet" id="java" data-category="desktop">
                     <div class="popupShowTutorat">
                         <h3>MatchTutor</h3>
                     </div>
@@ -560,7 +554,7 @@
             </a>
 
             <a href="#">
-                <div class="projet">
+                <div class="projet" data-category="desktop">
                     <div class="popupShowClassification">
                        <h3>Classification</h3> 
                     </div>
@@ -573,7 +567,7 @@
             </a>
 
             <a href="#">
-                <div class="projet" id="sql">
+                <div class="projet" id="sql" data-category="web">
                     <div class="popupShowAPI">
                         <h3>Pizzaland API</h3>
                     </div>
@@ -586,12 +580,12 @@
             </a>
 
             <a href="#">
-                <div class="projet" id="linux">
+                <div class="projet" id="linux" data-category="systeme">
                     <div class="popupShowMatrix">
                         <h3>Matrix</h3>
                     </div>
                     
-                    <img src="image/projets/matrix.jpg" alt="enigma config perso">
+                    <img src="image/projets/matrix.jpg" alt="matrix">
                     </a>
                     
                 </div>
@@ -608,7 +602,7 @@
             </div> -->
 
             <a href="#">
-                <div class="projet">
+                <div class="projet" data-category="web">
                     <div class="popupShowDepInfo">
                         <h3>Dep Info</h3>
                     </div>
@@ -682,6 +676,79 @@
             threshold: 0.5
         });
         elements.forEach(element => observer.observe(element));
+    </script>
+
+    <!-- SCRIPT GLOBAL POUR LES FILTRES - AUCUN CONFLIT POSSIBLE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // === GESTION FILTRES COMPÉTENCES ===
+            const competencesButtons = document.querySelectorAll('.competences-filter-btn');
+            const skills = document.querySelectorAll('#competences .skill');
+            
+            // Initialiser les compétences
+            skills.forEach(skill => {
+                skill.classList.add('show');
+                skill.classList.remove('hide');
+            });
+            
+            competencesButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Gérer les classes active pour compétences
+                    competencesButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Filtrer les compétences avec animation
+                    skills.forEach(skill => {
+                        if (filterValue === 'all' || skill.getAttribute('data-category') === filterValue) {
+                            skill.classList.remove('hide');
+                            skill.classList.add('show');
+                        } else {
+                            skill.classList.remove('show');
+                            skill.classList.add('hide');
+                        }
+                    });
+                });
+            });
+
+            // === GESTION FILTRES PROJETS ===
+            const projetsButtons = document.querySelectorAll('.projets-filter-btn');
+            const projets = document.querySelectorAll('#realisation .projet');
+            
+            // Initialiser les projets
+            projets.forEach(projet => {
+                projet.classList.add('show');
+                projet.classList.remove('hide');
+            });
+            
+            projetsButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Gérer les classes active pour projets
+                    projetsButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Filtrer les projets avec animation
+                    projets.forEach(projet => {
+                        if (filterValue === 'all' || projet.getAttribute('data-category') === filterValue) {
+                            projet.classList.remove('hide');
+                            projet.classList.add('show');
+                        } else {
+                            projet.classList.remove('show');
+                            projet.classList.add('hide');
+                        }
+                    });
+                });
+            });
+        });
     </script>
 
 </body>
