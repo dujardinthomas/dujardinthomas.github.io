@@ -234,6 +234,7 @@
             <button class="competences-filter-btn" data-filter="outils">Outils</button>
         </div>
 
+        <!-- pour ajouter une compétence : copier un bloc .skill avec data-category = langages | frameworks | outils -->
         <div class="skills">
             <div class="skill" data-category="langages">
                 <a href="#java"><img src="image/competences/java.png" alt="java"></a>
@@ -280,11 +281,11 @@
                 <div class="labelSkill">PowerShell</div>
             </div>
             <div class="skill" data-category="outils">
-                <a href="#windows"><img src="image/competences/windows.png" alt="php"></a>
+                <a href="#windows"><img src="image/competences/windows.png" alt="windows"></a>
                 <div class="labelSkill">Windows</div>
             </div>
             <div class="skill" data-category="outils">
-                <a href="#linux"><img src="image/competences/linux.png" alt="Symfony"></a>
+                <a href="#linux"><img src="image/competences/linux.png" alt="linux"></a>
                 <div class="labelSkill">Linux</div>
             </div>
             <div class="skill" data-category="outils">
@@ -296,7 +297,7 @@
                 <div class="labelSkill">Nginx</div>
             </div>
             <div class="skill" data-category="outils">
-                <a href="#git"><img src="image/competences/git.png" alt="html"></a>
+                <a href="#git"><img src="image/competences/git.png" alt="git"></a>
                 <div class="labelSkill">Git</div>
             </div>
             <div class="skill" data-category="outils">
@@ -682,34 +683,27 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // === GESTION FILTRES COMPÉTENCES ===
+            // un clic = on masque (attribut hidden) les compétences hors catégorie,
+            // et celles qui restent rejouent une petite animation d'apparition
             const competencesButtons = document.querySelectorAll('.competences-filter-btn');
             const skills = document.querySelectorAll('#competences .skill');
-            
-            // Initialiser les compétences
-            skills.forEach(skill => {
-                skill.classList.add('show');
-                skill.classList.remove('hide');
-            });
-            
+            const apparition = [
+                { opacity: 0, transform: 'scale(0.8)' },
+                { opacity: 1, transform: 'scale(1)' }
+            ];
+
             competencesButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Gérer les classes active pour compétences
-                    competencesButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    const filterValue = button.getAttribute('data-filter');
-                    
-                    // Filtrer les compétences avec animation
+                button.addEventListener('click', () => {
+                    const filterValue = button.dataset.filter;
+
+                    // seul le bouton cliqué passe en vert
+                    competencesButtons.forEach(btn => btn.classList.toggle('active', btn === button));
+
                     skills.forEach(skill => {
-                        if (filterValue === 'all' || skill.getAttribute('data-category') === filterValue) {
-                            skill.classList.remove('hide');
-                            skill.classList.add('show');
-                        } else {
-                            skill.classList.remove('show');
-                            skill.classList.add('hide');
+                        const visible = filterValue === 'all' || skill.dataset.category === filterValue;
+                        skill.hidden = !visible;
+                        if (visible) {
+                            skill.animate(apparition, { duration: 400, easing: 'ease-out' });
                         }
                     });
                 });
